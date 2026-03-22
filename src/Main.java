@@ -14,5 +14,15 @@ public class Main {
 
         r1.printInfo();
         r2.printInfo();
+
+Library lib = new Library(10);
+
+lib.addBook(b1);
+lib.addBook(b2);
+lib.addBook(b3);
+
+lib.printAvailableBooks();
+
+System.out.println("Total books: " + lib.countAvailableBooks());
     }
 }
