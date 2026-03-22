@@ -8,5 +8,11 @@ public class Main {
         b1.printInfo();
         b1.borrow();
         b1.returnBook();
+
+        Reader r1 = new Reader("Ali", 1);
+        Reader r2 = new Reader("Ayşe", 2);
+
+        r1.printInfo();
+        r2.printInfo();
     }
 }
