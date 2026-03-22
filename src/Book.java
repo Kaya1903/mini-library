@@ -13,20 +13,29 @@ public class Book {
     }
 
     public void printInfo() {
-        System.out.println(title + " by " + author + " (" + pageCount + " pages)");
+        System.out.println(title + " by " + author + " (" + pageCount + " pages)"
+                + " | available: " + available);
     }
 
     public void borrow() {
         if (available) {
             available = false;
-            System.out.println("Book borrowed.");
+            System.out.println("Book borrowed: " + title);
         } else {
-            System.out.println("Book is not available.");
+            System.out.println("Book is not available: " + title);
         }
     }
 
     public void returnBook() {
         available = true;
-        System.out.println("Book returned.");
+        System.out.println("Book returned: " + title);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean isAvailable() {
+        return available;
     }
 }
