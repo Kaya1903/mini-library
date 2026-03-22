@@ -5,24 +5,35 @@ public class Main {
         Book b2 = new Book("Dune", "Herbert", 500, true);
         Book b3 = new Book("Harry Potter", "Rowling", 400, true);
 
-        b1.printInfo();
-        b1.borrow();
-        b1.returnBook();
+        Reader r1 = new Reader("Ali", "Kowalski", 1);
+        Reader r2 = new Reader("Ayse", "Nowak", 2);
 
-        Reader r1 = new Reader("Ali", 1);
-        Reader r2 = new Reader("Ayşe", 2);
+        Library lib = new Library(10);
 
-        r1.printInfo();
-        r2.printInfo();
+        lib.addBook(b1);
+        lib.addBook(b2);
+        lib.addBook(b3);
 
-Library lib = new Library(10);
+        lib.printAvailableBooks();
+        System.out.println("Available count: " + lib.countAvailableBooks());
 
-lib.addBook(b1);
-lib.addBook(b2);
-lib.addBook(b3);
+        r1.printData();
 
-lib.printAvailableBooks();
+        System.out.println("\nBorrowing Dune...");
+        lib.borrowBook("Dune", r1);
 
-System.out.println("Total books: " + lib.countAvailableBooks());
+        lib.printAvailableBooks();
+        System.out.println("Available count: " + lib.countAvailableBooks());
+        r1.printData();
+
+        System.out.println("\nReturning Dune...");
+        lib.returnBook("Dune", r1);
+
+        lib.printAvailableBooks();
+        System.out.println("Available count: " + lib.countAvailableBooks());
+        r1.printData();
+
+        System.out.println("\nSecond reader:");
+        r2.printData();
     }
 }
