@@ -16,6 +16,19 @@ public class Reader {
         System.out.println("Reader: " + firstName + " " + lastName
                 + ", card number: " + cardNumber
                 + ", borrowed count: " + borrowedCount);
+<<<<<<< HEAD
+=======
+    }
+
+    public void increaseBorrowedCount() {
+        borrowedCount++;
+    }
+
+    public void decreaseBorrowedCount() {
+        if (borrowedCount > 0) {
+            borrowedCount--;
+        }
+>>>>>>> 145a11d (Implement borrowing logic and the test scenario)
     }
 
     public void increaseBorrowedCount() {

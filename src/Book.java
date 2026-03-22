@@ -29,6 +29,17 @@ public class Book {
     public void returnBook() {
         available = true;
         System.out.println("Book returned: " + title);
+<<<<<<< HEAD
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean isAvailable() {
+        return available;
+=======
+>>>>>>> 145a11d (Implement borrowing logic and the test scenario)
     }
 
     public String getTitle() {

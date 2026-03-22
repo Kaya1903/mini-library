@@ -76,4 +76,8 @@ public class Library {
             System.out.println("This book is already in the library.");
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 145a11d (Implement borrowing logic and the test scenario)
